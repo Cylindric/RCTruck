@@ -4,6 +4,10 @@
 Truck::Truck() {
     pinMode(DRIVE_MOTOR_PIN1, OUTPUT);
     pinMode(DRIVE_MOTOR_PIN2, OUTPUT);
+
+    // Init steering motor
+    Servo steeringServo = Servo();
+    steeringServo.attach(STEERING_SERVO_PIN);
 }
 
 void Truck::Update() {}
@@ -40,9 +44,6 @@ void Truck::SetThrottle(int32_t throttle) {
 //   set_motor_pwm(adjustedThrottleValue, DRIVE_MOTOR_PIN1, DRIVE_MOTOR_PIN2);
 }
 
-
-// #include <ESP32Servo.h>  // by Kevin Harrington
-// Servo steeringServo;
 
 // int servoDelay = 0;
 // float adjustedSteeringValue = 90;
