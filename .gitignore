@@ -1,0 +1,20 @@
+# esp-idf
+sdkconfig.old
+sdkconfig
+
+# PIO
+.pio
+.pioenvs
+managed_components
+
+# Distribution files, used internally and build files
+dist/
+build/
+cmake-build-*/
+build/
+
+# VSCode
+.vscode/
+
+# Object files
+*.o
